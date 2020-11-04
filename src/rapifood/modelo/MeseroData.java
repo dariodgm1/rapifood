@@ -5,10 +5,20 @@
  */
 package rapifood.modelo;
 
+import java.sql.Connection;
+
 /**
  *
  * @author Usuario
  */
 public class MeseroData {
+    
+     private Connection con;
+
+
+    public MeseroData (Conexion conexion) {
+      con= conexion.getConnection();//obtengo la coneccion a la base de datos 
+    
+    }  
     
 }

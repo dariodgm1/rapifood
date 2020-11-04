@@ -5,10 +5,20 @@
  */
 package rapifood.modelo;
 
+import java.sql.Connection;
+
 /**
  *
  * @author Usuario
  */
 public class MenuData {
+
+     private Connection con;
+
+
+    public MenuData (Conexion conexion) {
+      con= conexion.getConnection();//obtengo la coneccion a la base de datos 
+    
+    }  
     
 }
