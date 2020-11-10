@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 public class Reserva {
              
                      private int idReserva;
+                     private int idMesa;
                      private int dniCliente;
                      private String apellidoNombreC;
                      private LocalDateTime fechaReserva;
@@ -23,16 +24,18 @@ public class Reserva {
     public Reserva() {
     }
 
-    public Reserva(int dniCliente, String apellidoNombreC, LocalDateTime fechaReserva, LocalDateTime fechaAhora, boolean activo) {
+    public Reserva(int dniCliente, int idMesa, String apellidoNombreC, LocalDateTime fechaReserva, LocalDateTime fechaAhora, boolean activo) {
         this.dniCliente = dniCliente;
+        this.idMesa = idMesa;
         this.apellidoNombreC = apellidoNombreC;
         this.fechaReserva = fechaReserva;
         this.fechaAhora = fechaAhora;
         this.activo = activo;
     }
 
-    public Reserva(int idReserva, int dniCliente, String apellidoNombreC, LocalDateTime fechaReserva, LocalDateTime fechaAhora, boolean activo) {
+    public Reserva(int idReserva,int idMesa, int dniCliente, String apellidoNombreC, LocalDateTime fechaReserva, LocalDateTime fechaAhora, boolean activo) {
         this.idReserva = idReserva;
+        this.idMesa = idMesa;
         this.dniCliente = dniCliente;
         this.apellidoNombreC = apellidoNombreC;
         this.fechaReserva = fechaReserva;
@@ -87,6 +90,15 @@ public class Reserva {
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
+
+    public int getIdMesa() {
+        return idMesa;
+    }
+
+    public void setIdMesa(int idMesa) {
+        this.idMesa = idMesa;
+    }
+    
                      
                        @Override
             public String toString(){

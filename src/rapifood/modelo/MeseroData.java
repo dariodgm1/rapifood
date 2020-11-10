@@ -29,7 +29,7 @@ public class MeseroData {
     
     }  
     
-    public void guardarMesero(Mesero mesero){
+    public void crearMesero(Mesero mesero){
         
     
         String sql="INSERT into mesero (idMesero, dniMesero, cuitMesero, nombreMesero, apellidoMesero, activo) "
@@ -62,9 +62,6 @@ public class MeseroData {
         }
  }
     
-    /**
-     *
-     */
     public void borrarMesero(int idMesero){
     
      
